@@ -120,6 +120,9 @@
   <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="lblHome.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: '0xProto Nerd Font'; font-size: 26.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(227, 227, 227); text-align: left; }</value>
+  </data>
   <data name="lblArtists.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: '0xProto Nerd Font'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(227, 227, 227); text-align: left; }</value>
   </data>
@@ -132,30 +135,10 @@
   <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: '0xProto Nerd Font'; font-size: 26.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(227, 227, 227); text-align: left; }</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="txtBoxSearchMusic.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMEAAAAjCAYAAAAtzm4VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEaSURBVHhe7dyhDsIwFEbhSiQSicSt27IEN8sjIJGTSOTe
-        AsljIZFIJBLuHSUkZU/Q/zT5IKyVPWuGWMhHVVXRHOq6HoGS+L5ummabtvr/8ElbdLXFL6Bkts/v9r1L
-        W/8zPIB8IVA6PxmmAPq+X9iFW74AEPDoum7FKQB1e38QPs5MACrG4B/ZRUAJEUAeEUAeEUAeEUAeEUAe
-        EUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUDeGGKMp5kJQMV0
-        Euyyi4CSwd9AtzTPmUmgeG3bbqaX8tqPIZ8ESmc3//MUwHf4swEnAoRc/I3safv/hkWwNv6CXv/HCChO
-        utnHtOVthPAGjMdq7/jEpp4AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: '0xProto Nerd Font'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
-  </data>
-  <metadata name="dragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>192, 17</value>
-  </metadata>
-  <metadata name="dragControl2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>316, 17</value>
-  </metadata>
   <data name="lblSongArtist.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: '0xProto Nerd Font'; font-size: 11.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(227, 227, 227); text-align: left; }</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="nowPlayingImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAABGdBTUEAALGPC/xhBQAAAjpQTFRFxtr8
@@ -234,9 +217,26 @@
   <data name="lblDuration.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: '0xProto Nerd Font'; font-size: 11.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(185, 209, 234); text-align: left; }</value>
   </data>
-  <data name="lblHome.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: '0xProto Nerd Font'; font-size: 26.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(227, 227, 227); text-align: left; }</value>
+  <data name="txtBoxSearchMusic.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMEAAAAjCAYAAAAtzm4VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEaSURBVHhe7dyhDsIwFEbhSiQSicSt27IEN8sjIJGTSOTe
+        AsljIZFIJBLuHSUkZU/Q/zT5IKyVPWuGWMhHVVXRHOq6HoGS+L5ummabtvr/8ElbdLXFL6Bkts/v9r1L
+        W/8zPIB8IVA6PxmmAPq+X9iFW74AEPDoum7FKQB1e38QPs5MACrG4B/ZRUAJEUAeEUAeEUAeEUAeEUAe
+        EUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUAeEUDeGGKMp5kJQMV0
+        Euyyi4CSwd9AtzTPmUmgeG3bbqaX8tqPIZ8ESmc3//MUwHf4swEnAoRc/I3safv/hkWwNv6CXv/HCChO
+        utnHtOVthPAGjMdq7/jEpp4AAAAASUVORK5CYII=
+</value>
   </data>
+  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: '0xProto Nerd Font'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <metadata name="dragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>192, 17</value>
+  </metadata>
+  <metadata name="dragControl2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>316, 17</value>
+  </metadata>
   <metadata name="songTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>440, 17</value>
   </metadata>

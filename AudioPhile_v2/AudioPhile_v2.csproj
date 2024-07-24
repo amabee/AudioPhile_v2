@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,6 +66,27 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_headphones.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>paulsho.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
@@ -201,6 +237,12 @@
     <Compile Include="Custom Components\NoCurrentMedia.Designer.cs">
       <DependentUpon>NoCurrentMedia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom Components\RecentlyPlayed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Components\RecentlyPlayed.Designer.cs">
+      <DependentUpon>RecentlyPlayed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Custom Components\Song List.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -210,6 +252,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Props\MusicMetaData.cs" />
+    <Compile Include="Props\RecentlyPlayedSongs.cs" />
     <Compile Include="Reusable Controls\AddSongDirectory.cs" />
     <Compile Include="Singleton\PlaybackManager.cs" />
     <Compile Include="Views\Loader.cs">
@@ -233,6 +276,9 @@
     <EmbeddedResource Include="Custom Components\NoCurrentMedia.resx">
       <DependentUpon>NoCurrentMedia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Custom Components\RecentlyPlayed.resx">
+      <DependentUpon>RecentlyPlayed.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Custom Components\Song List.resx">
       <DependentUpon>Song List.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +297,8 @@
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="paulsho.pfx" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -332,6 +380,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\pause_192px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\high_volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\low_volume_192px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\no_audio_192px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_headphones.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

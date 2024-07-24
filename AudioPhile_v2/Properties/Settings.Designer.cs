@@ -34,5 +34,17 @@ namespace AudioPhile_v2.Properties {
                 this["SongDirectories"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentTracks {
+            get {
+                return ((string)(this["RecentTracks"]));
+            }
+            set {
+                this["RecentTracks"] = value;
+            }
+        }
     }
 }

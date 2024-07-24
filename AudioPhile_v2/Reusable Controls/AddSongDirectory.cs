@@ -9,7 +9,7 @@ namespace AudioPhile_v2.Reusable_Controls
 {
     public class AddSongDirectory
     {
-        public static async void AddSongDirectoryFunction()
+        public static void AddSongDirectoryFunction()
         {
             string directories = Properties.Settings.Default.SongDirectories;
 

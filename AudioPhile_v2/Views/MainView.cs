@@ -24,6 +24,11 @@ namespace AudioPhile_v2.Views
         public static event Action<bool> PlayStateChanged;
         private static bool currentPlayerState;
 
+        private bool isVolumePanelShowing;
+
+        private FlowLayoutPanel recentlyPlayedPanel;
+
+
         public MainView()
         {
             InitializeComponent();
@@ -36,7 +41,8 @@ namespace AudioPhile_v2.Views
             });
 
             PlayStateChanged += PlayStateChanger;
-            
+
+           
         }
         public static void SetButtons(bool isPlaying)
         {
@@ -60,15 +66,18 @@ namespace AudioPhile_v2.Views
             if (isPlaying)
             {
                 currentPlayerState = isPlaying;
+                btnPlayPause.Enabled = true;
             }
             else
             {
                 currentPlayerState = isPlaying;
+               
             }
 
             NowPlaying();
         }
 
+     
 
         private void DefaultsOnStartUp()
         {
@@ -79,7 +88,81 @@ namespace AudioPhile_v2.Views
             btnPanel2Colored.FillColor = Color.Transparent;
 
             coloredPanel1.FillColor = Color.FromArgb(237, 117, 37);
+
+
+            isVolumePanelShowing = false;
+            btnPlayPause.Enabled = false;
+
+            PlaybackManager.changeVolume(musicVolumeTrackBar.Value);
+
+            LoadRecentlyPlayedSongs();
         }
+
+        private void LoadRecentlyPlayedSongs()
+        {
+            List<RecentlyPlayedSongs> allRecent = RecentlyPlayedSongs.GetAllRecentlyPlayedSongs();
+            MusicMetaData metadata = new MusicMetaData(); // Create an instance
+
+            if (allRecent.Count > 0)
+            {
+                homeMusicPanelMain.Controls.Clear();
+
+                recentlyPlayedPanel = new FlowLayoutPanel
+                {
+                    Dock = DockStyle.Fill,
+                    AutoScroll = true,
+                    FlowDirection = FlowDirection.LeftToRight,
+                    WrapContents = true
+                };
+
+                foreach (var recentSong in allRecent)
+                {
+                    var songMetadata = metadata.GetMusicMetaData(recentSong.RecentlyPlayedAudioFilePath);
+
+                    if (songMetadata == null)
+                    {
+                        Console.WriteLine($"Metadata for {recentSong.RecentlyPlayedAudioFilePath} is null.");
+                        continue;
+                    }
+
+                    Console.WriteLine($"Adding: {songMetadata.SongTitle} by {songMetadata.SongArtist}");
+
+                    Console.WriteLine($"{recentSong.RecentlyPlayedAudioFilePath}");
+
+                    RecentlyPlayed recentlyPlayed = new RecentlyPlayed(
+                        songMetadata.SongTitle,
+                        songMetadata.SongArtist,
+                        songMetadata.AlbumArt
+                    );
+
+                    recentlyPlayedPanel.Controls.Add(recentlyPlayed);
+                }
+
+                homeMusicPanelMain.Controls.Add(recentlyPlayedPanel);
+
+                if (SelectFolderPanel != null)
+                {
+                    SelectFolderPanel.Visible = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No recently played songs.");
+                NoCurrentMedia noCurrentMedia = new NoCurrentMedia
+                {
+                    Dock = DockStyle.Fill
+                };
+                homeMusicPanelMain.Controls.Clear();
+                homeMusicPanelMain.Controls.Add(noCurrentMedia);
+
+                if (SelectFolderPanel != null)
+                {
+                    SelectFolderPanel.Visible = false;
+                }
+            }
+        }
+
+
 
         private void nowPlayingMusicPanel_MouseHover(object sender, EventArgs e)
         {
@@ -107,8 +190,7 @@ namespace AudioPhile_v2.Views
 
         private void dropDownMoreOptionsSelections_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{Properties.Settings.Default.SongDirectories}");
-
+            ClearAllRecentPlayed();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -120,6 +202,8 @@ namespace AudioPhile_v2.Views
 
             btnPanel2.FillColor = Color.Transparent;
             btnPanel2Colored.FillColor = Color.Transparent;
+
+            LoadRecentlyPlayedSongs();
         }
 
         private void btnMusicLib_Click(object sender, EventArgs e)
@@ -293,6 +377,8 @@ namespace AudioPhile_v2.Views
             Properties.Settings.Default.SongDirectories = string.Empty;
             Properties.Settings.Default.Save();
 
+            PlaybackManager.MusicList.Clear();
+
             MessageBox.Show("All directories have been cleared.");
         }
 
@@ -330,6 +416,17 @@ namespace AudioPhile_v2.Views
                 playerTrackBar.Value = Math.Min(currentPositionInSeconds, playerTrackBar.Maximum);
             }
 
+            if(currentPlayerState == true &&lblElapsedTime.Text == lblDuration.Text)
+            {
+                songTimer.Stop();
+                
+                Task.Delay(2000);
+                PlaybackManager.Next();
+                songTimer.Start();
+
+                NowPlaying();
+            }
+
         }
 
         private string FormatTime(TimeSpan time)
@@ -348,7 +445,7 @@ namespace AudioPhile_v2.Views
                     || PlaybackManager.CurrentMusicMetaData.AlbumArt == null)
                 {
 
-                    MessageBox.Show($"PlaybackManager Current Music Metadata is Empty: \n Result:{PlaybackManager.CurrentMusicMetaData.SongTitle}");
+                    MessageBox.Show($"PlaybackManager Current Music Metadata is Empty: \n Result");
                 }
                 else
                 {
@@ -375,6 +472,70 @@ namespace AudioPhile_v2.Views
         {
             PlaybackManager.Previous();
             NowPlaying();
+        }
+
+        private void btnVolumeShow_Click(object sender, EventArgs e)
+        {
+            if (isVolumePanelShowing == false) {
+
+                panelVolume.Visible = true;
+                isVolumePanelShowing = true;
+                return;
+            }
+
+            if(isVolumePanelShowing == true)
+            {
+                panelVolume.Visible = false;
+                isVolumePanelShowing = false;
+            }
+        }
+
+        private void musicVolumeTrackBar_Scroll(object sender, ScrollEventArgs e)
+        {
+            PlaybackManager.changeVolume(musicVolumeTrackBar.Value);
+            lblVolume.Text = musicVolumeTrackBar.Value.ToString();
+
+            if (musicVolumeTrackBar.Value < 30) {
+
+                btnVolumeIndicator.Image = Properties.Resources.low_volume_192px;
+            }
+            
+            if(musicVolumeTrackBar.Value > 30 && musicVolumeTrackBar.Value < 65)
+            {
+                btnVolumeIndicator.Image = Properties.Resources.volume;
+            }
+
+            if(musicVolumeTrackBar.Value > 65)
+            {
+                btnVolumeIndicator.Image = Properties.Resources.high_volume;
+            }
+
+            if (musicVolumeTrackBar.Value == 0) {
+
+                btnVolumeIndicator.Image = Properties.Resources.no_audio_192px;
+            }
+
+
+        }
+    
+        private void ClearAllRecentPlayed()
+        {
+            Properties.Settings.Default.RecentTracks = string.Empty;
+            Properties.Settings.Default.Save();
+
+            MessageBox.Show("Recent played songs removed");
+
+            LoadRecentlyPlayedSongs();
+        }
+
+        private void playerTrackBar_Scroll(object sender, ScrollEventArgs e)
+        {
+            PlaybackManager.SetTrackPosition(playerTrackBar.Value);
+        }
+
+        private void btnFullScreen_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

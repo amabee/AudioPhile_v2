@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.sidePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnPanel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -54,8 +54,13 @@
             this.dragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.dragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.downPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.panelVolume = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnVolumeIndicator = new Guna.UI2.WinForms.Guna2Button();
+            this.musicVolumeTrackBar = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.lblVolume = new System.Windows.Forms.Label();
+            this.playerTrackBar = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.btnFullScreen = new Guna.UI2.WinForms.Guna2Button();
+            this.btnVolumeShow = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.btnPlayNext = new Guna.UI2.WinForms.Guna2Button();
             this.btnPlayPrevious = new Guna.UI2.WinForms.Guna2Button();
@@ -98,8 +103,6 @@
             this.lblSongs = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.songTimer = new System.Windows.Forms.Timer(this.components);
-            this.noCurrentMedia1 = new AudioPhile_v2.Custom_Components.NoCurrentMedia();
-            this.playerTrackBar = new Guna.UI2.WinForms.Guna2TrackBar();
             this.sidePanel.SuspendLayout();
             this.btnPanel2.SuspendLayout();
             this.btnPanel1.SuspendLayout();
@@ -108,11 +111,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.mainTopPanel.SuspendLayout();
             this.downPanel.SuspendLayout();
+            this.panelVolume.SuspendLayout();
             this.nowPlayingMusicPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nowPlayingImage)).BeginInit();
             this.ViewsTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.homeMusicPanelMain.SuspendLayout();
             this.homeTabPanel.SuspendLayout();
             this.SelectFolderPanel.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -270,26 +273,26 @@
             this.txtBoxSearchMusic.Modified = false;
             this.txtBoxSearchMusic.Multiline = false;
             this.txtBoxSearchMusic.Name = "txtBoxSearchMusic";
-            stateProperties9.BorderColor = System.Drawing.Color.Empty;
-            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            stateProperties9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(117)))), ((int)(((byte)(37)))));
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBoxSearchMusic.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtBoxSearchMusic.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.Empty;
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBoxSearchMusic.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Transparent;
-            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBoxSearchMusic.OnIdleState = stateProperties12;
+            stateProperties1.BorderColor = System.Drawing.Color.Empty;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            stateProperties1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(117)))), ((int)(((byte)(37)))));
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBoxSearchMusic.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtBoxSearchMusic.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.Empty;
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBoxSearchMusic.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Transparent;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBoxSearchMusic.OnIdleState = stateProperties4;
             this.txtBoxSearchMusic.Padding = new System.Windows.Forms.Padding(3);
             this.txtBoxSearchMusic.PasswordChar = '\0';
             this.txtBoxSearchMusic.PlaceholderForeColor = System.Drawing.Color.LightGray;
@@ -415,9 +418,10 @@
             // downPanel
             // 
             this.downPanel.BorderColor = System.Drawing.Color.Black;
+            this.downPanel.Controls.Add(this.panelVolume);
             this.downPanel.Controls.Add(this.playerTrackBar);
-            this.downPanel.Controls.Add(this.guna2Button9);
-            this.downPanel.Controls.Add(this.guna2Button8);
+            this.downPanel.Controls.Add(this.btnFullScreen);
+            this.downPanel.Controls.Add(this.btnVolumeShow);
             this.downPanel.Controls.Add(this.guna2Button7);
             this.downPanel.Controls.Add(this.btnPlayNext);
             this.downPanel.Controls.Add(this.btnPlayPrevious);
@@ -434,37 +438,101 @@
             this.downPanel.Size = new System.Drawing.Size(980, 143);
             this.downPanel.TabIndex = 2;
             // 
-            // guna2Button9
+            // panelVolume
             // 
-            this.guna2Button9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button9.ForeColor = System.Drawing.Color.White;
-            this.guna2Button9.Image = global::AudioPhile_v2.Properties.Resources.expand_192px;
-            this.guna2Button9.Location = new System.Drawing.Point(852, 77);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(28, 28);
-            this.guna2Button9.TabIndex = 10;
+            this.panelVolume.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panelVolume.BorderRadius = 50;
+            this.panelVolume.Controls.Add(this.btnVolumeIndicator);
+            this.panelVolume.Controls.Add(this.musicVolumeTrackBar);
+            this.panelVolume.Controls.Add(this.lblVolume);
+            this.panelVolume.Location = new System.Drawing.Point(663, 12);
+            this.panelVolume.Name = "panelVolume";
+            this.panelVolume.Size = new System.Drawing.Size(305, 40);
+            this.panelVolume.TabIndex = 1;
+            this.panelVolume.Visible = false;
             // 
-            // guna2Button8
+            // btnVolumeIndicator
             // 
-            this.guna2Button8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.Image = global::AudioPhile_v2.Properties.Resources.volume;
-            this.guna2Button8.Location = new System.Drawing.Point(814, 77);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(28, 28);
-            this.guna2Button8.TabIndex = 9;
+            this.btnVolumeIndicator.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVolumeIndicator.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVolumeIndicator.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVolumeIndicator.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVolumeIndicator.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVolumeIndicator.FillColor = System.Drawing.Color.Transparent;
+            this.btnVolumeIndicator.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnVolumeIndicator.ForeColor = System.Drawing.Color.White;
+            this.btnVolumeIndicator.Image = global::AudioPhile_v2.Properties.Resources.volume;
+            this.btnVolumeIndicator.Location = new System.Drawing.Point(15, 5);
+            this.btnVolumeIndicator.Name = "btnVolumeIndicator";
+            this.btnVolumeIndicator.Size = new System.Drawing.Size(28, 28);
+            this.btnVolumeIndicator.TabIndex = 9;
+            // 
+            // musicVolumeTrackBar
+            // 
+            this.musicVolumeTrackBar.DisplayFocus = true;
+            this.musicVolumeTrackBar.IndicateFocus = true;
+            this.musicVolumeTrackBar.Location = new System.Drawing.Point(49, 5);
+            this.musicVolumeTrackBar.Name = "musicVolumeTrackBar";
+            this.musicVolumeTrackBar.Size = new System.Drawing.Size(205, 30);
+            this.musicVolumeTrackBar.TabIndex = 3;
+            this.musicVolumeTrackBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(130)))), ((int)(((byte)(60)))));
+            this.musicVolumeTrackBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.musicVolumeTrackBar_Scroll);
+            // 
+            // lblVolume
+            // 
+            this.lblVolume.Font = new System.Drawing.Font("0xProto Nerd Font", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVolume.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblVolume.Location = new System.Drawing.Point(263, 3);
+            this.lblVolume.Name = "lblVolume";
+            this.lblVolume.Size = new System.Drawing.Size(35, 33);
+            this.lblVolume.TabIndex = 2;
+            this.lblVolume.Text = "50";
+            this.lblVolume.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // playerTrackBar
+            // 
+            this.playerTrackBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.playerTrackBar.Location = new System.Drawing.Point(57, 12);
+            this.playerTrackBar.Name = "playerTrackBar";
+            this.playerTrackBar.Size = new System.Drawing.Size(856, 23);
+            this.playerTrackBar.TabIndex = 1;
+            this.playerTrackBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.playerTrackBar.Value = 0;
+            this.playerTrackBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.playerTrackBar_Scroll);
+            // 
+            // btnFullScreen
+            // 
+            this.btnFullScreen.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnFullScreen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFullScreen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFullScreen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFullScreen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFullScreen.FillColor = System.Drawing.Color.Transparent;
+            this.btnFullScreen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFullScreen.ForeColor = System.Drawing.Color.White;
+            this.btnFullScreen.Image = global::AudioPhile_v2.Properties.Resources.expand_192px;
+            this.btnFullScreen.Location = new System.Drawing.Point(852, 77);
+            this.btnFullScreen.Name = "btnFullScreen";
+            this.btnFullScreen.Size = new System.Drawing.Size(28, 28);
+            this.btnFullScreen.TabIndex = 10;
+            this.btnFullScreen.Click += new System.EventHandler(this.btnFullScreen_Click);
+            // 
+            // btnVolumeShow
+            // 
+            this.btnVolumeShow.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnVolumeShow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVolumeShow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVolumeShow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVolumeShow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVolumeShow.FillColor = System.Drawing.Color.Transparent;
+            this.btnVolumeShow.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnVolumeShow.ForeColor = System.Drawing.Color.White;
+            this.btnVolumeShow.Image = global::AudioPhile_v2.Properties.Resources.volume;
+            this.btnVolumeShow.Location = new System.Drawing.Point(814, 77);
+            this.btnVolumeShow.Name = "btnVolumeShow";
+            this.btnVolumeShow.Size = new System.Drawing.Size(28, 28);
+            this.btnVolumeShow.TabIndex = 9;
+            this.btnVolumeShow.Click += new System.EventHandler(this.btnVolumeShow_Click);
             // 
             // guna2Button7
             // 
@@ -700,7 +768,7 @@
             // 
             // homeMusicPanelMain
             // 
-            this.homeMusicPanelMain.Controls.Add(this.noCurrentMedia1);
+            this.homeMusicPanelMain.AutoScroll = true;
             this.homeMusicPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homeMusicPanelMain.Location = new System.Drawing.Point(0, 71);
             this.homeMusicPanelMain.Margin = new System.Windows.Forms.Padding(0);
@@ -883,7 +951,7 @@
             this.listOfAlbums.Location = new System.Drawing.Point(5, 4);
             this.listOfAlbums.Name = "listOfAlbums";
             this.listOfAlbums.Padding = new System.Windows.Forms.Padding(3);
-            this.listOfAlbums.Size = new System.Drawing.Size(777, 320);
+            this.listOfAlbums.Size = new System.Drawing.Size(956, 320);
             this.listOfAlbums.TabIndex = 1;
             this.listOfAlbums.Text = "tabPage4";
             // 
@@ -893,7 +961,7 @@
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(592, 36);
+            this.guna2Panel2.Size = new System.Drawing.Size(950, 36);
             this.guna2Panel2.TabIndex = 5;
             // 
             // guna2Button2
@@ -920,7 +988,7 @@
             this.listOfArtists.Controls.Add(this.guna2Panel3);
             this.listOfArtists.Location = new System.Drawing.Point(5, 4);
             this.listOfArtists.Name = "listOfArtists";
-            this.listOfArtists.Size = new System.Drawing.Size(777, 320);
+            this.listOfArtists.Size = new System.Drawing.Size(956, 320);
             this.listOfArtists.TabIndex = 2;
             this.listOfArtists.Text = "tabPage3";
             // 
@@ -930,7 +998,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(598, 36);
+            this.guna2Panel3.Size = new System.Drawing.Size(956, 36);
             this.guna2Panel3.TabIndex = 5;
             // 
             // guna2Button3
@@ -982,7 +1050,7 @@
             this.btnClearFolders.ForeColor = System.Drawing.Color.White;
             this.btnClearFolders.Image = global::AudioPhile_v2.Properties.Resources.Remove_512px;
             this.btnClearFolders.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnClearFolders.Location = new System.Drawing.Point(654, 25);
+            this.btnClearFolders.Location = new System.Drawing.Point(840, 25);
             this.btnClearFolders.Name = "btnClearFolders";
             this.btnClearFolders.Size = new System.Drawing.Size(113, 32);
             this.btnClearFolders.TabIndex = 8;
@@ -1003,7 +1071,7 @@
             this.musicTabPageAddFolder.ForeColor = System.Drawing.Color.White;
             this.musicTabPageAddFolder.Image = global::AudioPhile_v2.Properties.Resources.add_folder_208px;
             this.musicTabPageAddFolder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.musicTabPageAddFolder.Location = new System.Drawing.Point(513, 25);
+            this.musicTabPageAddFolder.Location = new System.Drawing.Point(699, 25);
             this.musicTabPageAddFolder.Name = "musicTabPageAddFolder";
             this.musicTabPageAddFolder.Size = new System.Drawing.Size(135, 32);
             this.musicTabPageAddFolder.TabIndex = 2;
@@ -1118,25 +1186,6 @@
             this.songTimer.Enabled = true;
             this.songTimer.Tick += new System.EventHandler(this.songTimer_Tick);
             // 
-            // noCurrentMedia1
-            // 
-            this.noCurrentMedia1.BackColor = System.Drawing.Color.Transparent;
-            this.noCurrentMedia1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.noCurrentMedia1.Location = new System.Drawing.Point(0, 0);
-            this.noCurrentMedia1.Name = "noCurrentMedia1";
-            this.noCurrentMedia1.Size = new System.Drawing.Size(971, 334);
-            this.noCurrentMedia1.TabIndex = 0;
-            // 
-            // playerTrackBar
-            // 
-            this.playerTrackBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.playerTrackBar.Location = new System.Drawing.Point(57, 12);
-            this.playerTrackBar.Name = "playerTrackBar";
-            this.playerTrackBar.Size = new System.Drawing.Size(856, 23);
-            this.playerTrackBar.TabIndex = 1;
-            this.playerTrackBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
-            this.playerTrackBar.Value = 0;
-            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1162,12 +1211,12 @@
             this.mainTopPanel.ResumeLayout(false);
             this.downPanel.ResumeLayout(false);
             this.downPanel.PerformLayout();
+            this.panelVolume.ResumeLayout(false);
             this.nowPlayingMusicPanel.ResumeLayout(false);
             this.nowPlayingMusicPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nowPlayingImage)).EndInit();
             this.ViewsTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.homeMusicPanelMain.ResumeLayout(false);
             this.homeTabPanel.ResumeLayout(false);
             this.homeTabPanel.PerformLayout();
             this.SelectFolderPanel.ResumeLayout(false);
@@ -1222,7 +1271,6 @@
         private Guna.UI2.WinForms.Guna2Button btnMusicLib;
         private Guna.UI2.WinForms.Guna2Panel btnPanel2Colored;
         private Guna.UI2.WinForms.Guna2Panel homeMusicPanelMain;
-        private Custom_Components.NoCurrentMedia noCurrentMedia1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel lblArtists;
@@ -1249,9 +1297,13 @@
         private Guna.UI2.WinForms.Guna2Button btnPlayNext;
         private Guna.UI2.WinForms.Guna2Button btnPlayPrevious;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button btnFullScreen;
+        private Guna.UI2.WinForms.Guna2Button btnVolumeShow;
         public System.Windows.Forms.Timer songTimer;
         private Guna.UI2.WinForms.Guna2TrackBar playerTrackBar;
+        private Guna.UI2.WinForms.Guna2Panel panelVolume;
+        private System.Windows.Forms.Label lblVolume;
+        private Guna.UI2.WinForms.Guna2TrackBar musicVolumeTrackBar;
+        private Guna.UI2.WinForms.Guna2Button btnVolumeIndicator;
     }
 }

@@ -184,6 +184,16 @@ namespace AudioPhile_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap high_volume {
+            get {
+                object obj = ResourceManager.GetObject("high_volume", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_144px {
             get {
                 object obj = ResourceManager.GetObject("home_144px", resourceCulture);
@@ -214,9 +224,29 @@ namespace AudioPhile_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap low_volume_192px {
+            get {
+                object obj = ResourceManager.GetObject("low_volume_192px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap music_512px {
             get {
                 object obj = ResourceManager.GetObject("music_512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no_audio_192px {
+            get {
+                object obj = ResourceManager.GetObject("no_audio_192px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

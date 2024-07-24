@@ -23,6 +23,7 @@ namespace AudioPhile.Singleton
         public static TimeSpan Duration => _currentAudioFileReader?.TotalTime ?? TimeSpan.Zero;
         public static List<MusicMetaData> MusicList { get; set; } = new List<MusicMetaData>();
 
+        private static RecentlyPlayedSongs newSong;
         public static void Play(int index)
         {
             if (index < 0 || index >= MusicList.Count)
@@ -33,6 +34,7 @@ namespace AudioPhile.Singleton
 
             Stop();
 
+
             _currentIndex = index;
             _currentMusicMetaData = MusicList[index];
 
@@ -42,7 +44,11 @@ namespace AudioPhile.Singleton
             _currentWavePlayer.Init(_currentAudioFileReader);
             _currentWavePlayer.Play();
             _isPaused = false;
+
+            RecentlyPlayedSongs.AddRecentlyPlayedSong(_currentMusicMetaData.AudioFilePath);
         }
+
+
 
         public static void changeVolume(float volumeValue)
         {
@@ -104,6 +110,13 @@ namespace AudioPhile.Singleton
             Play(nextIndex);
         }
 
+        public static void SetTrackPosition(int positionInSeconds)
+        {
+            if (_currentAudioFileReader != null)
+            {
+                _currentAudioFileReader.CurrentTime = TimeSpan.FromSeconds(positionInSeconds);
+            }
+        }
 
     }
 }
