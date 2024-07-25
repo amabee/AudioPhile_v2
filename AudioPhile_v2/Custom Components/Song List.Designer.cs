@@ -159,6 +159,8 @@
             this.lblMusicSongTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMusicSongTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lblMusicSongTitle.Click += new System.EventHandler(this.lblMusicSongTitle_Click);
+            this.lblMusicSongTitle.MouseLeave += new System.EventHandler(this.lblMusicSongTitle_MouseLeave);
+            this.lblMusicSongTitle.MouseHover += new System.EventHandler(this.lblMusicSongTitle_MouseHover);
             // 
             // Song_List
             // 

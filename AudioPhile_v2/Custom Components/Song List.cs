@@ -66,7 +66,7 @@ namespace AudioPhile_v2.Custom_Components
                     MessageBox.Show($"Invalid music name or file path: {_audioFilePath}");
                     return;
                 }
-                MessageBox.Show($"{_audioFilePath}");
+                
                 int index = PlaybackManager.MusicList.FindIndex(m => m.AudioFilePath == _audioFilePath);
 
                 if (index != -1)
@@ -83,6 +83,16 @@ namespace AudioPhile_v2.Custom_Components
                 MessageBox.Show($"An error occurred while playing the audio: {ex.Message}");
                 Console.WriteLine($"An error occurred while playing the audio: {ex.Message}");
             }
+        }
+
+        private void lblMusicSongTitle_MouseHover(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void lblMusicSongTitle_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor= Cursors.Default;
         }
     }
 }

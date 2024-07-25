@@ -405,12 +405,14 @@
             // 
             // dragControl1
             // 
+            this.dragControl1.DockForm = true;
             this.dragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.dragControl1.TargetControl = this.mainTopPanel;
             this.dragControl1.UseTransparentDrag = true;
             // 
             // dragControl2
             // 
+            this.dragControl2.DockForm = true;
             this.dragControl2.DockIndicatorTransparencyValue = 0.6D;
             this.dragControl2.TargetControl = this.sideTopPanel;
             this.dragControl2.UseTransparentDrag = true;

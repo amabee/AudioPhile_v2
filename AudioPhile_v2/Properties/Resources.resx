@@ -118,65 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="headphones_400px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\headphones_400px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Loading Screen Anime" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Loading Screen Anime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="international_music_240px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\international_music_240px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chevron_right_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\chevron_right_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="back_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\back_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shuffle_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\shuffle_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="down_button_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\down_button_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2151134061" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\2151134061.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="music_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\music_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\search_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="repeat_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\repeat_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pause_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\pause_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="23985797_6846739" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\23985797_6846739.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bright-cartoon-kawaii-image-call-center-specialist-girl_93995-16498-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\bright-cartoon-kawaii-image-call-center-specialist-girl_93995-16498-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="opened_folder_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\opened_folder_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="play_384px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\play_384px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home_144px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\home_144px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="volume" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\volume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add_folder_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\add_folder_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Remove_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Remove_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="warning_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\warning_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="expand_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\expand_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,19 +127,85 @@
   <data name="21511339401" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\2151133940.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2151133940" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\2151133940.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bright-cartoon-kawaii-image-call-center-specialist-girl_93995-16498" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\bright-cartoon-kawaii-image-call-center-specialist-girl_93995-16498.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="high_volume" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\high_volume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chevron_right_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\chevron_right_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="headphones_400px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\headphones_400px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opened_folder_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\opened_folder_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="low_volume_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\low_volume_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="check_mark_button_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\check_mark_button_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_384px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\play_384px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\search_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bright-cartoon-kawaii-image-call-center-specialist-girl_93995-16498-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\bright-cartoon-kawaii-image-call-center-specialist-girl_93995-16498-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="repeat_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\repeat_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="down_button_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\down_button_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="high_volume" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\high_volume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="international_music_240px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\international_music_240px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="volume" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\volume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_folder_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\add_folder_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\back_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="23985797_6846739" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\23985797_6846739.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Loading Screen Anime" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Loading Screen Anime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home_144px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\home_144px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="no_audio_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\no_audio_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="music_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\music_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2151134061" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\2151134061.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Remove_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Remove_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2151133940" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\2151133940.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shuffle_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\shuffle_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pause_192px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\pause_192px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\cross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

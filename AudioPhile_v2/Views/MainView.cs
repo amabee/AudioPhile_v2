@@ -1,5 +1,6 @@
 ﻿using AudioPhile.Singleton;
 using AudioPhile_v2.Custom_Components;
+using AudioPhile_v2.Custom_Components.Custom_MessageBox;
 using AudioPhile_v2.Props;
 using AudioPhile_v2.Reusable_Controls;
 using Guna.UI2.WinForms;
@@ -101,7 +102,7 @@ namespace AudioPhile_v2.Views
         private void LoadRecentlyPlayedSongs()
         {
             List<RecentlyPlayedSongs> allRecent = RecentlyPlayedSongs.GetAllRecentlyPlayedSongs();
-            MusicMetaData metadata = new MusicMetaData(); // Create an instance
+            MusicMetaData metadata = new MusicMetaData();
 
             if (allRecent.Count > 0)
             {
@@ -121,13 +122,10 @@ namespace AudioPhile_v2.Views
 
                     if (songMetadata == null)
                     {
-                        Console.WriteLine($"Metadata for {recentSong.RecentlyPlayedAudioFilePath} is null.");
+                        CustomMessageBox.Show($"Error", "Invalid Song Metadata", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         continue;
                     }
 
-                    Console.WriteLine($"Adding: {songMetadata.SongTitle} by {songMetadata.SongArtist}");
-
-                    Console.WriteLine($"{recentSong.RecentlyPlayedAudioFilePath}");
 
                     RecentlyPlayed recentlyPlayed = new RecentlyPlayed(
                         songMetadata.SongTitle,
@@ -147,7 +145,6 @@ namespace AudioPhile_v2.Views
             }
             else
             {
-                MessageBox.Show("No recently played songs.");
                 NoCurrentMedia noCurrentMedia = new NoCurrentMedia
                 {
                     Dock = DockStyle.Fill
@@ -181,8 +178,6 @@ namespace AudioPhile_v2.Views
 
             Task.Run(async () =>
             {
-                MessageBox.Show("Is Running...");
-
                 await LoadAllMusicAsync();
 
             });
@@ -191,6 +186,7 @@ namespace AudioPhile_v2.Views
         private void dropDownMoreOptionsSelections_Click(object sender, EventArgs e)
         {
             ClearAllRecentPlayed();
+
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -221,7 +217,9 @@ namespace AudioPhile_v2.Views
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+               CustomMessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
             }
 
         }
@@ -260,7 +258,7 @@ namespace AudioPhile_v2.Views
 
             Task.Run(async () =>
             {
-                MessageBox.Show("Is Running...");
+                
 
                 await LoadAllMusicAsync();
 
@@ -272,9 +270,11 @@ namespace AudioPhile_v2.Views
             try
             {
                 string directories = Properties.Settings.Default.SongDirectories;
+
                 if (string.IsNullOrWhiteSpace(directories))
                 {
-                    MessageBox.Show("No directories configured.");
+
+                    DialogResult result = CustomMessageBox.Show("Warning", "No directories configured", MessageBoxButtons.OK);
                     return;
                 }
 
@@ -311,7 +311,8 @@ namespace AudioPhile_v2.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                CustomMessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
         }
 
@@ -345,7 +346,7 @@ namespace AudioPhile_v2.Views
                     if (isLoading)
                     {
                         loadingDialog = new LoadingDialog();
-                        loadingDialog.StartPosition = FormStartPosition.CenterParent;
+                        loadingDialog.StartPosition = FormStartPosition.CenterScreen;
                         this.Enabled = false;
                         loadingDialog.Show(this);
                     }
@@ -367,8 +368,15 @@ namespace AudioPhile_v2.Views
 
         private void btnClearFolders_Click(object sender, EventArgs e)
         {
-            ResetDirectories();
-            musicListPanel.Controls.Clear();
+            DialogResult result = CustomMessageBox.Show("Alert","Are you sure you want to reset the directories?", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+
+            if(result == DialogResult.OK)
+            {
+                ResetDirectories();
+                musicListPanel.Controls.Clear();
+            }
+           
+           
         }
 
         private void ResetDirectories()
@@ -379,7 +387,8 @@ namespace AudioPhile_v2.Views
 
             PlaybackManager.MusicList.Clear();
 
-            MessageBox.Show("All directories have been cleared.");
+            DialogResult result = CustomMessageBox.Show("Information","All directories have been cleared.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btnPlayPause_Click(object sender, EventArgs e)
@@ -445,7 +454,7 @@ namespace AudioPhile_v2.Views
                     || PlaybackManager.CurrentMusicMetaData.AlbumArt == null)
                 {
 
-                    MessageBox.Show($"PlaybackManager Current Music Metadata is Empty: \n Result");
+                    CustomMessageBox.Show("Alert", "Select music first", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -458,7 +467,7 @@ namespace AudioPhile_v2.Views
             catch (Exception ex)
             {
 
-                MessageBox.Show($"Exception Error caught: {ex.Message}");
+                CustomMessageBox.Show("Exception Error caught", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -522,9 +531,8 @@ namespace AudioPhile_v2.Views
         {
             Properties.Settings.Default.RecentTracks = string.Empty;
             Properties.Settings.Default.Save();
-
-            MessageBox.Show("Recent played songs removed");
-
+            CustomMessageBox.Show("Success","Recent played songs removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
             LoadRecentlyPlayedSongs();
         }
 
@@ -535,7 +543,10 @@ namespace AudioPhile_v2.Views
 
         private void btnFullScreen_Click(object sender, EventArgs e)
         {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+            
         }
     }
 }

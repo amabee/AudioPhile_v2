@@ -48,8 +48,6 @@ namespace AudioPhile.Singleton
             RecentlyPlayedSongs.AddRecentlyPlayedSong(_currentMusicMetaData.AudioFilePath);
         }
 
-
-
         public static void changeVolume(float volumeValue)
         {
             if (_currentAudioFileReader != null)
